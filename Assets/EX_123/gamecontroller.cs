@@ -6,6 +6,12 @@ public class gamecontroller : MonoBehaviour
 {
     public dungeon dungeon;
     public Animator tresureBox;
+    public GameObject ark;
+    public GameObject thirdperson;
+    public GameObject arkCamera;
+    public GameObject UI;
+    public GameObject startUI;
+    public GameObject startCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,4 +26,18 @@ public class gamecontroller : MonoBehaviour
             tresureBox.SetBool("open", true);
         }
     }
+
+    public void ClickStartButton()
+    {
+        Debug.Log("Start");
+        startCamera.SetActive(false);
+        startUI.SetActive(false);
+
+        ark.SetActive(true);
+        arkCamera.SetActive(true);
+        thirdperson.SetActive(true);
+        
+        UI.SetActive(true);
+    }
 }
+
